@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <title>Country Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-bold bg-[#9993C8] w-[100vw] h-[100vh] text-[#e4e4e4] pt-[2em] flex flex-col justify-right items-center gap-[1em]">
+
+    <h1 class="text-[#201335] w-[100%] text-center text-[2em]">Country <span class="text-[#e4e4e4]">Guider</span></h1>
+    <form onsubmit="getCountry(event)" class="flex justify-center items-center p-[0.5em] gap-[1em] w-[90%]">
+        <input required type="search" id="userInput" placeholder="Enter Country Name" class="bg-[#e4e4e4] p-[0.5em] w-[50%] border border-[0px] rounded rounded-[10px] text-[#4F4789]">
+        <button type="submit" class="bg-[#201335] text-[#e4e4e4] p-[0.5em] w-[4em] rounded rounded-[10px] border border-[0px]"><h2 class="bi bi-search"></h2></button>
+    </form>
+
+    <h2 class="inst text-[1.5em] h-[100%] flex flex-col justify-center items-center text-[#201335] w-[100%] p-[1em] text-center">
+        Get Started By<span class="text-[white]"> Enter Country Name</span></h2>
+
+    <div class="result hidden flex flex-col justify-right items-center gap-[2em] w-[100%] pr-[1em] p-[1em]">
+        <img src="" alt="flag" id="flag" class="w-[10em] border border-[2px]">
+        <p class="w-[100%] text-center text-[#fff]">
+            <a class="text-[white]" id="map">See Map</a>
+        </p>
+        <h2 id="name" class="text-[#201335] w-[100%] text-center text-[1.5em]"></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+            <!-- Card 1: Official Name -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Official Name: <span id="official" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 2: Capital -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Capital: <span id="capital" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 3: Continents -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Continents: <span id="continents" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 4: Start of Week -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Start of Week: <span id="startOfWeek" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 5: Area -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Area: <span id="total" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 6: Population -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Population: <span id="population" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 7: Languages -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Languages: <span id="lang" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 8: Region -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Region: <span id="region" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 9: Sub Region -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Sub Region: <span id="subregion" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 10: Currency -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Currency: <span id="currency" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 11: Time Zone -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Time Zone: <span id="timezone" class="text-white"></span></p>
+            </div>
+        
+            <!-- Card 12: Borders -->
+            <div class="bg-[#201335] text-[#9993C8] rounded p-4">
+                <p class="text-left">Borders: <span id="borders" class="text-white"></span></p>
+            </div>
+        </div>
+
+    </div>
+    <!-- moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- javascript -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
